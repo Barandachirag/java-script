@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Q.20 What is the difference between && and || in JavaScript? -->
+
+<body>
+
+    <script>
+        // Logical AND( && ):
+
+        //     The && operator returns true
+        // if both operands are true, and false otherwise.
+        // If the first operand evaluates to false, the second operand is not evaluated because the result will always be false(short - circuiting).
+        // Example:
+        console.log(true && true); // Output: true
+        console.log(true && false); // Output: false
+        console.log(false && true); // Output: false
+        console.log(false && false); // Output: false
+
+        // Logical OR( || ):
+
+        //     The || operator returns true
+        // if at least one of the operands is true, and false
+        // if both operands are false.
+        // If the first operand evaluates to true, the second operand is not evaluated because the result will always be true(short - circuiting).
+        // Example:
+        console.log(true || true); // Output: true
+        console.log(true || false); // Output: true
+        console.log(false || true); // Output: true
+        console.log(false || false); // Output: false
+    </script>
+
+</body>
+
+</html>

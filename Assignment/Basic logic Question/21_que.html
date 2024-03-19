@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Q.21 What is the use of Void (0)? -->
+
+<body>
+
+    <script>
+        // Preventing Navigation: It 's often used in conjunction with the href attribute in HTML anchor (<a>) tags to prevent the browser from navigating to a new page when the link is clicked.
+        // For example:
+        // <a href="javascript:void(0);">Click me</a>
+
+
+        // Returning Undefined from a Function:
+
+        //     It can be used in functions to explicitly
+        // return undefined.
+        // For example:
+        function doSomething() {
+            // Do something...
+            return void(0);
+        }
+
+        // Avoiding Unwanted Values:
+
+        //     It can be used to ensure that an expression doesn 't return a specific value, such as false.
+        // For example:
+        if (condition) {
+            // Do something...
+        } else {
+            return void(0); // Ensures that the function doesn't return a value explicitly
+        }
+    </script>
+</body>
+
+</html>

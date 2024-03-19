@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Q.35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS? -->
+
+<body>
+    <script>
+        number = 1523;
+        sum = 0;
+
+
+        String(number).split('').forEach(digit => {
+            sum += Number(digit);
+        });
+
+        console.log("The summation of digits of", number, "is:", sum);
+        document.write("The summation of digits of", number, "is:", sum);
+    </script>
+
+</body>
+
+</html>

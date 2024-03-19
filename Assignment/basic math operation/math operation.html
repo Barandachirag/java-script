@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        position: relative;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    label {
+        font-size: 30px;
+    }
+    
+    input {
+        width: 50%;
+        height: 30px;
+    }
+    
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+    /* div {
+        font-size: 30px;
+        margin: 0 200px;
+    } */
+    
+    .diva {
+        position: absolute;
+        top: 70%;
+        right: 30%;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+
+    <table border="2" align="center" cellpadding="5" cellspacing="0" style="width: 40%; height: 400px;">
+        <!-- <form action=""> -->
+
+        <tr>
+            <td>
+
+                <h1>Maths operation</h1>
+                <label for="number1">Enter 1st number:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number" id="number1" style="font-size: 25px;"><br><br>
+                <label for="number2">Enter 2nd number:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number" id="number2" style="font-size: 25px;"><br>
+
+
+                <button onclick="performOperation('add')">+</button>
+                <button onclick="performOperation('subtract')">-</button>
+                <button onclick="performOperation('multiply')">*</button><br>
+                <button onclick="performOperation('divide')">/</button>
+                <button onclick="performOperation('mod')">%</button>
+                <div class="diva">Answer is: <label id="result" style="font-size:30px ;color: blue"> </label></div>
+
+
+            </td>
+
+        </tr>
+
+
+        <!-- </form> -->
+    </table>
+
+    <script>
+        function performOperation(operation) {
+
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+
+
+
+            let result;
+            switch (operation) {
+                case 'add':
+                    result = number1 + number2;
+                    document.getElementById('result').innerText = result;
+                    break;
+                case 'subtract':
+                    result = number1 - number2;
+                    document.getElementById('result').innerText = result;
+                    break;
+                case 'multiply':
+                    result = number1 * number2;
+                    document.getElementById('result').innerText = result;
+                    break;
+                case 'divide':
+                    result = number2 !== 0 ? number1 / number2 : 'Division by zero';
+                    document.getElementById('result').innerText = result;
+                    break;
+                case 'mod':
+                    result = number2 !== 0 ? number1 % number2 : 'Division by zero';
+                    document.getElementById('result').innerText = result;
+                    break;
+                default:
+                    break;
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

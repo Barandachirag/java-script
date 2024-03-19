@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 3)
+ 1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15 -->
+
+<body>
+    <script>
+        counter = 1;
+        for (i = 1; i <= 5; i++) {
+            line = '';
+            for (j = 1; j <= i; j++) {
+                line += counter++ + ' ';
+            }
+            console.log(line);
+        }
+    </script>
+</body>
+
+</html>
